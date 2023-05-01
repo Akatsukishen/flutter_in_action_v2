@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_in_action_v2/ch04/fractional_offset_page.dart';
 
 import 'ch04/align_page.dart';
 
@@ -25,6 +26,7 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    "Fractional使用": (context) => const FractionalOffsetPage(),
     "Align使用": (context) => const AlignPage()
   };
 
@@ -34,21 +36,20 @@ class HomeEntryPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Flutter实战(第2版)'),
       ),
-      body: ListView.builder(
+      body: ListView.separated(
         itemBuilder: (context, index) => ListTile(
-          title: GestureDetector(
-              onTap: () {
-                Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: _entries[_entries.keys.toList()[index]]!
-                    ),
-                  );
-              },
-              child: Text(
-                _entries.keys.toList()[index],
-              )),
+          onTap: () {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                  builder: _entries[_entries.keys.toList()[index]]!),
+            );
+          },
+          title: Text(
+            _entries.keys.toList()[index],
+          ),
         ),
         itemCount: _entries.length,
+        separatorBuilder: (context, index) => const Divider(),
       ),
     );
   }

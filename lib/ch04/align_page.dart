@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_in_action_v2/base/base_page.dart';
 
-/// 1.相对定位 是Align组件相对于父组件。
-/// 2.Align组件 如果不指定widthFactor,heightFactor的话，大小就是子组件的大小
+/// 1.Align组件 如果不指定widthFactor,heightFactor的话,父组件有多大显示多大。
 ///   指定了widthFactor,heightFactor，Align组件大小
 /// 3.子组件的坐标公式(https://segmentfault.com/a/1190000041631644)
 /// var x = (alignWidth - childWidth) / 2 + x * ((alignWidth - childWidth) / 2);
