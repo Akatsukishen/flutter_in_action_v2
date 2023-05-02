@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_in_action_v2/ch04/fractional_offset_page.dart';
 import 'package:flutter_in_action_v2/ch04/layout_builder_page.dart';
 import 'package:flutter_in_action_v2/ch05/decorated_box_page.dart';
+import 'package:flutter_in_action_v2/ch05/transform_page.dart';
 
 import 'ch04/align_page.dart';
 
@@ -28,6 +29,7 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    'Transform使用': (context) => const TransformPage(),
     'DecoratedBox使用': (context) => const DecoratedBoxPage(),
     'LayoutBuilder使用': (context) => const LayoutBuilderPage(),
     "Fractional使用": (context) => const FractionalOffsetPage(),
