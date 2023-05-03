@@ -6,6 +6,7 @@ import 'package:flutter_in_action_v2/ch05/transform_page.dart';
 import 'package:flutter_in_action_v2/ch09/animated_widget_page.dart';
 import 'package:flutter_in_action_v2/ch09/bouncein_anamition_page.dart';
 import 'package:flutter_in_action_v2/ch09/scale_animation_page.dart';
+import 'package:flutter_in_action_v2/ch09/stagger_animation_page.dart';
 
 import 'ch04/align_page.dart';
 
@@ -32,6 +33,7 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    '交织动画':  (context) => const StaggerAnimationPage(),
     'AmimatedWidget使用': (context) => const AnimatedWidgetPage(),
     '弹簧放大动画': (context) => const BounceInAnimationPage(),
     '放大动画' : (context) => const ScaleAnimationPage(),
