@@ -3,6 +3,7 @@ import 'package:flutter_in_action_v2/ch04/fractional_offset_page.dart';
 import 'package:flutter_in_action_v2/ch04/layout_builder_page.dart';
 import 'package:flutter_in_action_v2/ch05/decorated_box_page.dart';
 import 'package:flutter_in_action_v2/ch05/transform_page.dart';
+import 'package:flutter_in_action_v2/ch09/animated_widget_page.dart';
 import 'package:flutter_in_action_v2/ch09/bouncein_anamition_page.dart';
 import 'package:flutter_in_action_v2/ch09/scale_animation_page.dart';
 
@@ -31,6 +32,7 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    'AmimatedWidget使用': (context) => const AnimatedWidgetPage(),
     '弹簧放大动画': (context) => const BounceInAnimationPage(),
     '放大动画' : (context) => const ScaleAnimationPage(),
     'Transform使用': (context) => const TransformPage(),
