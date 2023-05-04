@@ -75,7 +75,9 @@ class _StaggerAnimationPageState extends State<StaggerAnimationPage>
     try {
       await _controller.forward().orCancel;
       await _controller.reverse().orCancel;
-    } on TickerCanceled {}
+    } on TickerCanceled {
+      ///
+    }
   }
 
   @override

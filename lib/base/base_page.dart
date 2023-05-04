@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
 abstract class BasePage extends StatelessWidget {
   const BasePage({super.key,required this.title});

@@ -5,6 +5,7 @@ import 'package:flutter_in_action_v2/ch05/decorated_box_page.dart';
 import 'package:flutter_in_action_v2/ch05/transform_page.dart';
 import 'package:flutter_in_action_v2/ch09/animated_widget_page.dart';
 import 'package:flutter_in_action_v2/ch09/bouncein_anamition_page.dart';
+import 'package:flutter_in_action_v2/ch09/pageroute_builder_page.dart';
 import 'package:flutter_in_action_v2/ch09/scale_animation_page.dart';
 import 'package:flutter_in_action_v2/ch09/stagger_animation_page.dart';
 
@@ -33,6 +34,7 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    'PageRouteBuilder使用': (context) => const PageRouteBuilderPage(),
     '交织动画':  (context) => const StaggerAnimationPage(),
     'AmimatedWidget使用': (context) => const AnimatedWidgetPage(),
     '弹簧放大动画': (context) => const BounceInAnimationPage(),
@@ -61,6 +63,7 @@ class HomeEntryPage extends StatelessWidget {
           title: Text(
             _entries.keys.toList()[index],
           ),
+          dense: false,
         ),
         itemCount: _entries.length,
         separatorBuilder: (context, index) => const Divider(),
