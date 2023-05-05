@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_in_action_v2/ch09/animated_switcher_page.dart';
 
 import 'ch04/align_page.dart';
 import 'ch04/fractional_offset_page.dart';
@@ -36,6 +37,7 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    '动画切换组件': (context) => const AnimatedSwitcherPage(),
     'Hero动画': (context) => const HeroPage(),
     '自定义路由切换动画': (context) => const FadeRoutePage(),
     'PageRouteBuilder使用': (context) => const PageRouteBuilderPage(),
