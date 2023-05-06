@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'slide_transtionx.dart';
+
 /// 实现效果 自增数字时 新数字右边进来，老数字左边出去
 /// 使用默认的SlideAnimation
 ///   由于新控件是启动正向动画，老控件执行的是方向(reverse)动画
@@ -16,6 +18,7 @@ class AnimatedSwitcherPage2 extends StatefulWidget {
 class _AnimatedSwitcherPage2State extends State<AnimatedSwitcherPage2> {
   var _num1 = 0;
   var _num2 = 0;
+  var _num3 = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -85,7 +88,34 @@ class _AnimatedSwitcherPage2State extends State<AnimatedSwitcherPage2> {
               });
             },
             child: const Text('addNum2'),
-          )
+          ),
+          const SizedBox(
+            height: 50.0,
+            width: double.infinity,
+          ),
+          AnimatedSwitcher(
+            duration: const Duration(milliseconds: 200),
+            transitionBuilder: (child, animation) {
+              return SlideTranstionX(
+                position: animation,
+                direction: AxisDirection.down, //上入下出
+                child: child,
+              ); 
+            },
+            child: Text(
+              '$_num3',
+              key: ValueKey(_num3),
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              setState(() {
+                _num3++;
+              });
+            },
+            child: const Text('addNum3'),
+          ),
         ],
       ),
     );
