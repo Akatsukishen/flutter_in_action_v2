@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_in_action_v2/ch09/animated_switcher_page.dart';
+import 'package:flutter_in_action_v2/exercise/order_page.dart';
 
 import 'ch04/align_page.dart';
 import 'ch04/fractional_offset_page.dart';
 import 'ch04/layout_builder_page.dart';
 import 'ch05/decorated_box_page.dart';
 import 'ch05/transform_page.dart';
+import 'ch09/animated_switcher_page2.dart';
 import 'ch09/animated_widget_page.dart';
 import 'ch09/bouncein_anamition_page.dart';
 import 'ch09/fade_route_page.dart';
@@ -37,6 +39,8 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    '动画切换组件2':(context) => const AnimatedSwitcherPage2(),
+    '订单状态管理': (context) => OrderPage(),
     '动画切换组件': (context) => const AnimatedSwitcherPage(),
     'Hero动画': (context) => const HeroPage(),
     '自定义路由切换动画': (context) => const FadeRoutePage(),
