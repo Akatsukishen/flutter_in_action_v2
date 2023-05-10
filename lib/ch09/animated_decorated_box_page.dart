@@ -10,7 +10,7 @@ class AnimatedDecoratedBoxPage extends StatefulWidget {
 
 class _AnimatedDecoratedBoxPageState extends State<AnimatedDecoratedBoxPage> {
   Color _decorationColor = Colors.blue;
-  var duration = const Duration(seconds: 1);
+  var duration = const Duration(seconds: 3);
 
   @override
   Widget build(BuildContext context) {
@@ -19,26 +19,44 @@ class _AnimatedDecoratedBoxPageState extends State<AnimatedDecoratedBoxPage> {
         title: const Text('自定义过渡动画'),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          const SizedBox(
+            width: double.infinity,
+            height: 50,
+          ),
+          AnimatedDecocatedBox(
+            duration: duration,
+            decoration: BoxDecoration(color: _decorationColor),
+            child: TextButton(
+              onPressed: () {
+                setState(() {
+                  _decorationColor = Colors.blue != _decorationColor ? Colors.blue : Colors.red;
+                });
+              },
+              child: const Text(
+                'AnimatedDecocatedBox',
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+          ),
           const SizedBox(
             height: 50,
           ),
-          Align(
-            alignment: Alignment.topCenter,
-            child: AnimatedDecocatedBox(
-              duration: duration,
-              decoration: BoxDecoration(color: _decorationColor),
-              child: TextButton(
-                onPressed: () {
-                  setState(() {
-                    _decorationColor = Colors.red;
-                    // _decorationColor = Colors.blue != _decorationColor ? Colors.blue : Colors.red;
-                  });
-                },
-                child: const Text(
-                  'AnimatedDecocatedBox',
-                  style: TextStyle(color: Colors.white),
-                ),
+          ImplicitlyAnimatedDecoratedBox(
+            decoration: BoxDecoration(color: _decorationColor),
+            duration: duration,
+            child: TextButton(
+              onPressed: () {
+                setState(() {
+                  _decorationColor = Colors.blue != _decorationColor
+                      ? Colors.blue
+                      : Colors.red;
+                });
+              },
+              child: const Text(
+                'AnimatedDecocatedBox',
+                style: TextStyle(color: Colors.white),
               ),
             ),
           )
@@ -46,6 +64,54 @@ class _AnimatedDecoratedBoxPageState extends State<AnimatedDecoratedBoxPage> {
       ),
     );
   }
+}
+
+/// 隐式动画组件
+/// 组件继承ImpliclityAniamtedWidget
+/// State继承AnimatedWidgetBaseState,AnimatedWidgetBaseState继承自ImplicitlyAnimatedWidgetState
+class ImplicitlyAnimatedDecoratedBox extends ImplicitlyAnimatedWidget {
+  const ImplicitlyAnimatedDecoratedBox(
+      {super.key,
+      required this.decoration,
+      required this.child,
+      super.curve = Curves.linear,
+      required super.duration});
+
+  final Decoration decoration;
+  final Widget child;
+
+  @override
+  ImplicitlyAnimatedWidgetState<ImplicitlyAnimatedWidget> createState() {
+    return _ImplicitlyAnimatedDecoratedBoxState();
+  }
+}
+
+// AnimatedWidgetBaseState 继承自 ImplicitlyAnimatedWidgetState
+class _ImplicitlyAnimatedDecoratedBoxState
+    extends AnimatedWidgetBaseState<ImplicitlyAnimatedDecoratedBox> {
+
+  DecorationTween? _decoration;
+
+  @override
+  Widget build(BuildContext context) {
+    if (_decoration == null) {
+      return const SizedBox();
+    }
+    return DecoratedBox(
+      decoration: _decoration!.evaluate(animation),
+      child: widget.child,
+    );
+  }
+
+  @override
+  void forEachTween(TweenVisitor<dynamic> visitor) {
+    _decoration = visitor(
+      _decoration, //当前的tween，第一次调用为null
+      widget.decoration, //终止状态
+      (value) => DecorationTween(begin: value), //Tween构造器，在上述三种情况下会被调用以更新tween
+    ) as DecorationTween;
+  }
+
 }
 
 /// 自定义装饰过渡动画
