@@ -12,6 +12,7 @@ import 'ch05/transform_page.dart';
 import 'ch09/animated_decorated_box_page.dart';
 import 'ch09/animated_switcher_page2.dart';
 import 'ch09/animated_widget_page.dart';
+import 'ch09/animated_widgets_page.dart';
 import 'ch09/bouncein_anamition_page.dart';
 import 'ch09/fade_route_page.dart';
 import 'ch09/hero_page.dart';
@@ -42,6 +43,7 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    '内置过渡动画组件':(context) => const AnimatedWidgetsPage(),
     '自定义过渡动画组件':(context) => const AnimatedDecoratedBoxPage(),
     '编译期赋值变量':(context) => const CompilingVariablePage(),
     'overflow': (contextt) => const OverFlowPage(),
