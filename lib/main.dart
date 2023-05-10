@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_in_action_v2/ch09/animated_switcher_page.dart';
 import 'package:flutter_in_action_v2/exercise/order_page.dart';
+import 'package:flutter_in_action_v2/exercise/overflow_page.dart';
+import 'package:flutter_in_action_v2/exercise/variable_compile.dart';
 
 import 'ch04/align_page.dart';
 import 'ch04/fractional_offset_page.dart';
 import 'ch04/layout_builder_page.dart';
 import 'ch05/decorated_box_page.dart';
 import 'ch05/transform_page.dart';
+import 'ch09/animated_decorated_box_page.dart';
 import 'ch09/animated_switcher_page2.dart';
 import 'ch09/animated_widget_page.dart';
 import 'ch09/bouncein_anamition_page.dart';
@@ -39,6 +42,9 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    '自定义过渡动画组件':(context) => const AnimatedDecoratedBoxPage(),
+    '编译期赋值变量':(context) => const CompilingVariablePage(),
+    'overflow': (contextt) => const OverFlowPage(),
     '动画切换组件2':(context) => const AnimatedSwitcherPage2(),
     '订单状态管理': (context) => OrderPage(),
     '动画切换组件': (context) => const AnimatedSwitcherPage(),
