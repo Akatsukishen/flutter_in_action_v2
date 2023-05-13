@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_in_action_v2/ch06/single_scroll_view_page.dart';
 import 'package:flutter_in_action_v2/ch09/animated_switcher_page.dart';
 import 'package:flutter_in_action_v2/exercise/order_page.dart';
 import 'package:flutter_in_action_v2/exercise/overflow_page.dart';
@@ -43,6 +44,7 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    '单滚动组件': (context) => const SingleChildScrollViewPage(),
     '内置过渡动画组件':(context) => const AnimatedWidgetsPage(),
     '自定义过渡动画组件':(context) => const AnimatedDecoratedBoxPage(),
     '编译期赋值变量':(context) => const CompilingVariablePage(),
