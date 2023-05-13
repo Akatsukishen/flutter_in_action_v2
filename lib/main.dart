@@ -3,6 +3,7 @@ import 'package:flutter_in_action_v2/ch06/list_vew_header_page.dart';
 import 'package:flutter_in_action_v2/ch06/list_view_builder_page.dart';
 import 'package:flutter_in_action_v2/ch06/list_view_prototype_page.dart';
 import 'package:flutter_in_action_v2/ch06/listview_load_page.dart';
+import 'package:flutter_in_action_v2/ch06/scroll_controll_page.dart';
 import 'package:flutter_in_action_v2/ch06/single_scroll_view_page.dart';
 import 'package:flutter_in_action_v2/ch09/animated_switcher_page.dart';
 import 'package:flutter_in_action_v2/exercise/order_page.dart';
@@ -49,6 +50,7 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    '滚动控制': (context) => const ScrollControllPage(),
     'ListView头部':(context) => const ListViewHeaderPage(),
     'ListView动态加载数据': (context) => const ListViewLoadPage(),
     '指定原型创建ListView': (context) => const ListViewPrototypePage(),
