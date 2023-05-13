@@ -20,7 +20,7 @@ class OrderPage extends BasePage {
 }
 
 class OrderCard extends StatefulWidget {
-  OrderCard({required this.order, Key? key}) : super(key: key);
+  const OrderCard({required this.order, Key? key}) : super(key: key);
 
   final Order order;
 

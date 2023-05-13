@@ -180,7 +180,7 @@ class _AnimatedDecocatedBoxState extends State<AnimatedDecocatedBox>
   @override
   void didUpdateWidget(covariant AnimatedDecocatedBox oldWidget) {
     super.didUpdateWidget(oldWidget);
-    print("===> didUpdateWidget.");
+    debugPrint("===> didUpdateWidget.");
     if (widget.curve != oldWidget.curve) _updateCurve();
     _controller.duration = widget.duration;
     _controller.reverseDuration = widget.reverseDuration;

@@ -12,7 +12,7 @@ class _OverFlowPageState extends State<OverFlowPage> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Overflow'),
+          title: const Text('Overflow'),
         ),
         body: Padding(
           padding: const EdgeInsets.symmetric(vertical: 30.0),

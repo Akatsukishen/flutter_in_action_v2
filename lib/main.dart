@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_in_action_v2/ch06/animated_list_page.dart';
 import 'package:flutter_in_action_v2/ch06/list_vew_header_page.dart';
 import 'package:flutter_in_action_v2/ch06/list_view_builder_page.dart';
 import 'package:flutter_in_action_v2/ch06/list_view_prototype_page.dart';
@@ -50,6 +51,7 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    '动画列表': (context) => const AnimatedListPage(),
     '滚动控制': (context) => const ScrollControllPage(),
     'ListView头部':(context) => const ListViewHeaderPage(),
     'ListView动态加载数据': (context) => const ListViewLoadPage(),
