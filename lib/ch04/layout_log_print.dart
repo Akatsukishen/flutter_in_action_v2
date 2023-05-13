@@ -10,7 +10,9 @@ class LayoutLogPrint<T> extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return LayoutBuilder(builder: (_, constraints) {
-      assert(() { //执行并返回
+      assert(() {
+        //执行并返回
+        debugPrint("===>  constraints = $constraints");
         return true;
       }());
       return child;

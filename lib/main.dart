@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_in_action_v2/ch06/animated_list_page.dart';
+import 'package:flutter_in_action_v2/ch06/gridview_count_page.dart';
+import 'package:flutter_in_action_v2/ch06/gridview_extent_page.dart';
 import 'package:flutter_in_action_v2/ch06/list_vew_header_page.dart';
 import 'package:flutter_in_action_v2/ch06/list_view_builder_page.dart';
 import 'package:flutter_in_action_v2/ch06/list_view_prototype_page.dart';
@@ -51,6 +53,8 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    'GridView指定横向最大宽度': (context) => const GridViewExtentPage(),
+    'GridView指定横向个数': (context) => const GridViewCountPage(),
     '动画列表': (context) => const AnimatedListPage(),
     '滚动控制': (context) => const ScrollControllPage(),
     'ListView头部':(context) => const ListViewHeaderPage(),
