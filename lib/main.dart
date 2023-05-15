@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_in_action_v2/ch06/animated_list_page.dart';
+import 'package:flutter_in_action_v2/ch06/cache_enable_page_view_page.dart';
 import 'package:flutter_in_action_v2/ch06/gridview_count_page.dart';
 import 'package:flutter_in_action_v2/ch06/gridview_extent_page.dart';
 import 'package:flutter_in_action_v2/ch06/gridview_request_page.dart';
@@ -55,6 +56,7 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    'PageView缓存': (context) => const CacheEnablePageViewPage(),
     'PageView简单使用': (context) => const PageViewSimplePage(),
     'GridView动态请求数据': (context) => const GridViewRequestPage(),
     'GridView指定横向最大宽度': (context) => const GridViewExtentPage(),
