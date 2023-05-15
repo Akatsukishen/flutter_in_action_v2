@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_in_action_v2/ch06/animated_list_page.dart';
 import 'package:flutter_in_action_v2/ch06/gridview_count_page.dart';
 import 'package:flutter_in_action_v2/ch06/gridview_extent_page.dart';
+import 'package:flutter_in_action_v2/ch06/gridview_request_page.dart';
 import 'package:flutter_in_action_v2/ch06/list_vew_header_page.dart';
 import 'package:flutter_in_action_v2/ch06/list_view_builder_page.dart';
 import 'package:flutter_in_action_v2/ch06/list_view_prototype_page.dart';
 import 'package:flutter_in_action_v2/ch06/listview_load_page.dart';
+import 'package:flutter_in_action_v2/ch06/pageview_simple_page.dart';
 import 'package:flutter_in_action_v2/ch06/scroll_controll_page.dart';
 import 'package:flutter_in_action_v2/ch06/single_scroll_view_page.dart';
 import 'package:flutter_in_action_v2/ch09/animated_switcher_page.dart';
@@ -53,6 +55,8 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    'PageView简单使用': (context) => const PageViewSimplePage(),
+    'GridView动态请求数据': (context) => const GridViewRequestPage(),
     'GridView指定横向最大宽度': (context) => const GridViewExtentPage(),
     'GridView指定横向个数': (context) => const GridViewCountPage(),
     '动画列表': (context) => const AnimatedListPage(),
