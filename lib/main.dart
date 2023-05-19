@@ -12,6 +12,7 @@ import 'package:flutter_in_action_v2/ch06/pagevew_cache_controll_page.dart';
 import 'package:flutter_in_action_v2/ch06/pageview_simple_page.dart';
 import 'package:flutter_in_action_v2/ch06/scroll_controll_page.dart';
 import 'package:flutter_in_action_v2/ch06/single_scroll_view_page.dart';
+import 'package:flutter_in_action_v2/ch06/tab_bar_view_page.dart';
 import 'package:flutter_in_action_v2/ch09/animated_switcher_page.dart';
 import 'package:flutter_in_action_v2/exercise/order_page.dart';
 import 'package:flutter_in_action_v2/exercise/overflow_page.dart';
@@ -57,6 +58,7 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    'TabBarView简单使用':(context) => const TabBarViewPage(),
     'PageView缓存控制': (context) => const PageViewCacheControllPage(),
     'PageView缓存': (context) => const CacheEnablePageViewPage(),
     'PageView简单使用': (context) => const PageViewSimplePage(),
