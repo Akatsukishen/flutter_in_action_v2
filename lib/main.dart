@@ -8,6 +8,7 @@ import 'package:flutter_in_action_v2/ch06/list_vew_header_page.dart';
 import 'package:flutter_in_action_v2/ch06/list_view_builder_page.dart';
 import 'package:flutter_in_action_v2/ch06/list_view_prototype_page.dart';
 import 'package:flutter_in_action_v2/ch06/listview_load_page.dart';
+import 'package:flutter_in_action_v2/ch06/pagevew_cache_controll_page.dart';
 import 'package:flutter_in_action_v2/ch06/pageview_simple_page.dart';
 import 'package:flutter_in_action_v2/ch06/scroll_controll_page.dart';
 import 'package:flutter_in_action_v2/ch06/single_scroll_view_page.dart';
@@ -56,6 +57,7 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    'PageView缓存控制': (context) => const PageViewCacheControllPage(),
     'PageView缓存': (context) => const CacheEnablePageViewPage(),
     'PageView简单使用': (context) => const PageViewSimplePage(),
     'GridView动态请求数据': (context) => const GridViewRequestPage(),
