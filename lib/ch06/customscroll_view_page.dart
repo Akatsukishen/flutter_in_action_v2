@@ -34,7 +34,15 @@ class _CustomScrollViewPageState extends State<CustomScrollViewPage> {
                         builder: (context) => const CombinedTwoListView()),
                   );
                 },
-                child: const Text('调合两个ListView'))
+                child: const Text('调合两个ListView')),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                        builder: (context) => const SliversPage()),
+                  );
+                },
+                child: const Text('整合SliverView')),
           ],
         ),
       ),
@@ -125,10 +133,49 @@ class SliversPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Material(
+    return Material(
       child: CustomScrollView(
         slivers: [
-          SliverAppBar(),
+          SliverAppBar(
+            pinned: true,
+            expandedHeight: 250.0,
+            flexibleSpace: FlexibleSpaceBar(
+              title: const Text('Demo'),
+              background: Image.asset(
+                'assets/images/sea.jpg',
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+          SliverPadding(
+            padding: const EdgeInsets.all(8.0),
+            sliver: SliverGrid(
+              delegate:
+                  SliverChildBuilderDelegate((BuildContext context, int index) {
+                return Container(
+                  alignment: Alignment.center,
+                  color: Colors.cyan[100 * (index % 9)],
+                  child: Text('grid item $index'),
+                );
+              }, childCount: 20),
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                mainAxisSpacing: 10,
+                crossAxisSpacing: 10.0,
+                childAspectRatio: 4.0,
+              ),
+            ),
+          ),
+          SliverFixedExtentList(
+            itemExtent: 50.0,
+            delegate: SliverChildBuilderDelegate((context, index) {
+              return Container(
+                alignment: Alignment.center,
+                color: Colors.cyan[100 * (index % 9)],
+                child: Text('grid item $index'),
+              );
+            },childCount: 20),
+          ),
         ],
       ),
     );
