@@ -28,6 +28,7 @@ import 'ch05/decorated_box_page.dart';
 import 'ch05/transform_page.dart';
 import 'ch06/list_view_sperated_page.dart';
 import 'ch06/sliver_persistent_header_delegate_page.dart';
+import 'ch06/snap_app_bar_page2.dart';
 import 'ch09/animated_decorated_box_page.dart';
 import 'ch09/animated_switcher_page2.dart';
 import 'ch09/animated_widget_page.dart';
@@ -62,6 +63,7 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    '内嵌滚动View头部下拉不遮住已有内容': (context) => const SnapAppBarPage2(),
     '内嵌滚动View头部示例': (context) => const SnapAppBarPage(),
     'SliverPersistentHeader使用':(context) => const SliverPersistentHeaderPage(),
     'CustomScrollView使用': (context) => const CustomScrollViewPage(),
