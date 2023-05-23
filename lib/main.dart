@@ -13,6 +13,7 @@ import 'package:flutter_in_action_v2/ch06/pagevew_cache_controll_page.dart';
 import 'package:flutter_in_action_v2/ch06/pageview_simple_page.dart';
 import 'package:flutter_in_action_v2/ch06/scroll_controll_page.dart';
 import 'package:flutter_in_action_v2/ch06/single_scroll_view_page.dart';
+import 'package:flutter_in_action_v2/ch06/snap_app_bar_page.dart';
 import 'package:flutter_in_action_v2/ch06/tab_bar_view_default_controller_page.dart';
 import 'package:flutter_in_action_v2/ch06/tab_bar_view_page.dart';
 import 'package:flutter_in_action_v2/ch09/animated_switcher_page.dart';
@@ -61,6 +62,7 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    '内嵌滚动View头部示例': (context) => const SnapAppBarPage(),
     'SliverPersistentHeader使用':(context) => const SliverPersistentHeaderPage(),
     'CustomScrollView使用': (context) => const CustomScrollViewPage(),
     'TabBarView使用DefaultTabController': (context) =>
