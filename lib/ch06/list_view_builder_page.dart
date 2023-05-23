@@ -9,13 +9,17 @@ class LiveViewBuilderPage extends BasePage {
   @override
   Widget buildBody(BuildContext context) {
     return ListView.builder(
-      itemBuilder: (context,index) {
+      itemBuilder: (context, index) {
         return ListTile(
           title: Text('$index'),
         );
       },
-      itemExtent: 50, ///强制高度为50
-      itemCount: 100, ///列表项个数
+      itemExtent: 50,
+
+      ///强制高度为50
+      itemCount: 100,
+
+      ///列表项个数
     );
   }
 }

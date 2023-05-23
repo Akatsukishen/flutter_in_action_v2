@@ -6,9 +6,15 @@ class OrderPage extends BasePage {
 
   final List<Widget> _orders = [
     OrderCard(order: Order(1, 'Coffee', 20.00, 1, DateTime(2020, 1, 1))),
-    OrderCard(order: Order(2, 'Tea', 10.00, 1, DateTime(2020, 1, 2)), key: UniqueKey()),
-    OrderCard(order: Order(3, 'Cake', 50.00, 1, DateTime(2020, 1, 3)), key:UniqueKey()),
-    OrderCard(order: Order(4, 'Pizza', 100.00, 1, DateTime(2020, 1, 4)), key:UniqueKey()),
+    OrderCard(
+        order: Order(2, 'Tea', 10.00, 1, DateTime(2020, 1, 2)),
+        key: UniqueKey()),
+    OrderCard(
+        order: Order(3, 'Cake', 50.00, 1, DateTime(2020, 1, 3)),
+        key: UniqueKey()),
+    OrderCard(
+        order: Order(4, 'Pizza', 100.00, 1, DateTime(2020, 1, 4)),
+        key: UniqueKey()),
   ];
 
   @override

@@ -8,7 +8,8 @@ class SingleChildScrollViewPage extends BasePage {
   @override
   Widget buildBody(BuildContext context) {
     String str = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-    return Scrollbar( //显示滚动条
+    return Scrollbar(
+      //显示滚动条
       child: SingleChildScrollView(
         child: Center(
           child: Column(

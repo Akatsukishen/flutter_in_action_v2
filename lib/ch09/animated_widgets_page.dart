@@ -128,8 +128,7 @@ class _AnimatedWidgetsPageState extends State<AnimatedWidgetsPage> {
               duration: duration,
               child: TextButton(
                 style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(Colors.blue)
-                ),
+                    backgroundColor: MaterialStateProperty.all(Colors.blue)),
                 onPressed: () {
                   setState(() {
                     _opacity = _opacity == 1.0 ? 0.2 : 1.0;

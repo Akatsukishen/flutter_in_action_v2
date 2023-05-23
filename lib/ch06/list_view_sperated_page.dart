@@ -19,7 +19,8 @@ class ListViewSperatedPage extends BasePage {
             title: Text('$index'),
           );
         },
-        separatorBuilder: (context,index) => (index % 2 == 0) ? divider1 : divider2,
+        separatorBuilder: (context, index) =>
+            (index % 2 == 0) ? divider1 : divider2,
         itemCount: 100);
   }
 }

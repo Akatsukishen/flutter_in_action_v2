@@ -31,7 +31,9 @@ class _AnimatedDecoratedBoxPageState extends State<AnimatedDecoratedBoxPage> {
             child: TextButton(
               onPressed: () {
                 setState(() {
-                  _decorationColor = Colors.blue != _decorationColor ? Colors.blue : Colors.red;
+                  _decorationColor = Colors.blue != _decorationColor
+                      ? Colors.blue
+                      : Colors.red;
                 });
               },
               child: const Text(
@@ -89,7 +91,6 @@ class ImplicitlyAnimatedDecoratedBox extends ImplicitlyAnimatedWidget {
 // AnimatedWidgetBaseState 继承自 ImplicitlyAnimatedWidgetState
 class _ImplicitlyAnimatedDecoratedBoxState
     extends AnimatedWidgetBaseState<ImplicitlyAnimatedDecoratedBox> {
-
   DecorationTween? _decoration;
 
   @override
@@ -111,7 +112,6 @@ class _ImplicitlyAnimatedDecoratedBoxState
       (value) => DecorationTween(begin: value), //Tween构造器，在上述三种情况下会被调用以更新tween
     ) as DecorationTween;
   }
-
 }
 
 /// 自定义装饰过渡动画

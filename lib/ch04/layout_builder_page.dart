@@ -32,7 +32,9 @@ class LayoutBuilderPage extends BasePage {
         Container(
           color: Colors.red,
           width: 200,
-          child: const LayoutLogPrint<String>(child: Text('AA'),),
+          child: const LayoutLogPrint<String>(
+            child: Text('AA'),
+          ),
         )
       ],
     );

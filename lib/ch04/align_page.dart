@@ -7,8 +7,8 @@ import 'package:flutter_in_action_v2/base/base_page.dart';
 /// var x = (alignWidth - childWidth) / 2 + x * ((alignWidth - childWidth) / 2);
 /// var y = (alignHeight - childHeight) / 2 + x * ((parentHeight - childHeight) / 2);
 class AlignPage extends BasePage {
-  const AlignPage({super.key,super.title = "Align使用"});
-  
+  const AlignPage({super.key, super.title = "Align使用"});
+
   @override
   Widget buildBody(BuildContext context) {
     return Column(
@@ -26,7 +26,9 @@ class AlignPage extends BasePage {
             ),
           ),
         ),
-        const SizedBox(height: 10,),
+        const SizedBox(
+          height: 10,
+        ),
         Container(
           width: 360,
           height: 360,
@@ -34,7 +36,8 @@ class AlignPage extends BasePage {
           child: UnconstrainedBox(
             child: Container(
               color: Colors.green,
-              child: Align( //widthFactor,heightFactor 用于确定Align组件本身宽高的属性
+              child: Align(
+                //widthFactor,heightFactor 用于确定Align组件本身宽高的属性
                 alignment: Alignment.topRight,
                 widthFactor: 5.0,
                 heightFactor: 5.0,
@@ -50,5 +53,4 @@ class AlignPage extends BasePage {
       ],
     );
   }
-
 }

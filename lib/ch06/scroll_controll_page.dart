@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 /// 通过controller addListener 来监听滚动
 /// controller.offset 当前滚动的距离
 /// controller.jumpTo() animateTo() 跳转到指定偏移的位置
-/// 控件dispose时注意调用来避免内存泄漏 controller.dispose() 
+/// 控件dispose时注意调用来避免内存泄漏 controller.dispose()
 class ScrollControllPage extends StatefulWidget {
   const ScrollControllPage({Key? key}) : super(key: key);
 
@@ -64,7 +64,7 @@ class _ScrollControllPageState extends State<ScrollControllPage> {
 
   @override
   void dispose() {
-    _scrollController.dispose();//避免内存泄漏
+    _scrollController.dispose(); //避免内存泄漏
     super.dispose();
   }
 }

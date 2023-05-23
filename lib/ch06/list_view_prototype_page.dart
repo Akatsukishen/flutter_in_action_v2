@@ -12,10 +12,12 @@ class ListViewPrototypePage extends BasePage {
   @override
   Widget buildBody(BuildContext context) {
     return ListView.builder(
-      prototypeItem: const ListTile(title: Text('1'),),
+      prototypeItem: const ListTile(
+        title: Text('1'),
+      ),
       itemBuilder: (context, index) => ListTile(
-            title: Text('$index'),
-          ),
+        title: Text('$index'),
+      ),
       itemCount: 100,
     );
   }

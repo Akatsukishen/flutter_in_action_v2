@@ -25,7 +25,8 @@ class _PageViewSimplePageState extends State<PageViewSimplePage> {
       _pageChildren.add(Page(title: '页面$i'));
     }
     _pageController.addListener(() {
-      debugPrint("===> offset  = ${_pageController.offset}, page = ${_pageController.page}");
+      debugPrint(
+          "===> offset  = ${_pageController.offset}, page = ${_pageController.page}");
     });
   }
 

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 abstract class BasePage extends StatelessWidget {
-  const BasePage({super.key,required this.title});
+  const BasePage({super.key, required this.title});
 
-  final String title ;
+  final String title;
 
   @override
   Widget build(BuildContext context) {

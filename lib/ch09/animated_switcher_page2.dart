@@ -73,7 +73,7 @@ class _AnimatedSwitcherPage2State extends State<AnimatedSwitcherPage2> {
               return MySlideAnimation(
                 position: tweenAimation,
                 child: child,
-              ); 
+              );
             },
             child: Text(
               '$_num2',
@@ -100,7 +100,7 @@ class _AnimatedSwitcherPage2State extends State<AnimatedSwitcherPage2> {
                 position: animation,
                 direction: AxisDirection.down, //上入下出
                 child: child,
-              ); 
+              );
             },
             child: Text(
               '$_num3',

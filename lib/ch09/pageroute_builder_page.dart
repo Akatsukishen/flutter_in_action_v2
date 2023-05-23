@@ -13,26 +13,26 @@ class PageRouteBuilderPage extends BasePage {
     return Center(
       child: ElevatedButton(
         onPressed: () {
-          Navigator.of(context).push(
-              PageRouteBuilder(
-                transitionDuration: const Duration(milliseconds: 500), //动画时间
-                pageBuilder: (ctx, animation, secondAnimation) {
-            return FadeTransition( //页面切换动画
-              opacity: animation,
-              child: Scaffold(
-                appBar: AppBar(
-                  title: const Text('新页面'),
-                ),
-                body: Center(
-                  child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.of(context).pop();
-                      },
-                      child: const Text('返回')),
-                ),
-              ),
-            );
-          }));
+          Navigator.of(context).push(PageRouteBuilder(
+              transitionDuration: const Duration(milliseconds: 500), //动画时间
+              pageBuilder: (ctx, animation, secondAnimation) {
+                return FadeTransition(
+                  //页面切换动画
+                  opacity: animation,
+                  child: Scaffold(
+                    appBar: AppBar(
+                      title: const Text('新页面'),
+                    ),
+                    body: Center(
+                      child: ElevatedButton(
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
+                          child: const Text('返回')),
+                    ),
+                  ),
+                );
+              }));
         },
         child: const Text('切换'),
       ),

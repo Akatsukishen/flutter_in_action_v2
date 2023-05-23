@@ -12,12 +12,14 @@ class TransformPage extends BasePage {
     return Center(
       child: Column(
         children: [
-          const SizedBox(height: 100,),
+          const SizedBox(
+            height: 100,
+          ),
           Container(
             color: Colors.black,
             child: Transform(
               alignment: Alignment.topRight, //轴点
-              transform: Matrix4.skewY(0.3),  //沿着Y轴倾斜0.3弧度
+              transform: Matrix4.skewY(0.3), //沿着Y轴倾斜0.3弧度
               child: Container(
                 padding: const EdgeInsets.all(8.0),
                 color: Colors.deepOrange,
@@ -25,15 +27,20 @@ class TransformPage extends BasePage {
               ),
             ),
           ),
-          const SizedBox(height: 50,),
+          const SizedBox(
+            height: 50,
+          ),
           DecoratedBox(
             decoration: const BoxDecoration(color: Colors.red),
-            child: Transform.translate( //内容向指定方向平移
+            child: Transform.translate(
+              //内容向指定方向平移
               offset: const Offset(-20.0, -5.0),
               child: const Text('Hello world.'),
             ),
           ),
-          const SizedBox(height: 50,),
+          const SizedBox(
+            height: 50,
+          ),
           DecoratedBox(
             decoration: const BoxDecoration(color: Colors.red),
             child: Transform.rotate(
@@ -41,7 +48,9 @@ class TransformPage extends BasePage {
               child: const Text('Hello world'),
             ),
           ),
-          const SizedBox(height: 50,),
+          const SizedBox(
+            height: 50,
+          ),
           DecoratedBox(
             decoration: const BoxDecoration(color: Colors.red),
             child: Transform.scale(
@@ -49,32 +58,44 @@ class TransformPage extends BasePage {
               child: const Text('Hello world'),
             ),
           ),
-          const SizedBox(height: 50,),
+          const SizedBox(
+            height: 50,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               DecoratedBox(
                 decoration: const BoxDecoration(color: Colors.red),
-                child: Transform.scale( //transform操作应用于绘制阶段
+                child: Transform.scale(
+                  //transform操作应用于绘制阶段
                   scale: 1.5,
                   child: const Text('Hello world'),
-                ),  
+                ),
               ),
-              const Text('你好',style: TextStyle(color: Colors.green,fontSize: 18.0),)
+              const Text(
+                '你好',
+                style: TextStyle(color: Colors.green, fontSize: 18.0),
+              )
             ],
           ),
-          const SizedBox(height: 50,),
+          const SizedBox(
+            height: 50,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
               DecoratedBox(
                 decoration: BoxDecoration(color: Colors.red),
-                child: RotatedBox( //transform操作应用于绘制阶段
+                child: RotatedBox(
+                  //transform操作应用于绘制阶段
                   quarterTurns: 1,
                   child: Text('Hello world'),
-                ),  
+                ),
               ),
-              Text('你好',style: TextStyle(color: Colors.green,fontSize: 18.0),)
+              Text(
+                '你好',
+                style: TextStyle(color: Colors.green, fontSize: 18.0),
+              )
             ],
           ),
         ],

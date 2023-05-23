@@ -30,7 +30,9 @@ class _TabBarViewPageState extends State<TabBarViewPage>
           indicatorPadding: const EdgeInsets.symmetric(horizontal: 10),
           labelColor: Colors.white,
           unselectedLabelColor: Colors.cyanAccent,
-          indicatorWeight: 3.0, /// 指示器的高度
+          indicatorWeight: 3.0,
+
+          /// 指示器的高度
         ),
       ),
       body: TabBarView(
@@ -38,7 +40,10 @@ class _TabBarViewPageState extends State<TabBarViewPage>
           children: _tabs.map((e) {
             return Container(
               alignment: Alignment.center,
-              child: Text(e,textScaleFactor: 3,),
+              child: Text(
+                e,
+                textScaleFactor: 3,
+              ),
             );
           }).toList()),
     );

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_in_action_v2/ch06/animated_list_page.dart';
 import 'package:flutter_in_action_v2/ch06/cache_enable_page_view_page.dart';
+import 'package:flutter_in_action_v2/ch06/customscroll_view_page.dart';
 import 'package:flutter_in_action_v2/ch06/gridview_count_page.dart';
 import 'package:flutter_in_action_v2/ch06/gridview_extent_page.dart';
 import 'package:flutter_in_action_v2/ch06/gridview_request_page.dart';
@@ -59,8 +60,10 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
-    'TabBarView使用DefaultTabController': (context) => const TabBarViewWithDefaultControllerPage(),
-    'TabBarView简单使用':(context) => const TabBarViewPage(),
+    'CustomScrollView使用': (context) => const CustomScrollViewPage(),
+    'TabBarView使用DefaultTabController': (context) =>
+        const TabBarViewWithDefaultControllerPage(),
+    'TabBarView简单使用': (context) => const TabBarViewPage(),
     'PageView缓存控制': (context) => const PageViewCacheControllPage(),
     'PageView缓存': (context) => const CacheEnablePageViewPage(),
     'PageView简单使用': (context) => const PageViewSimplePage(),
@@ -69,26 +72,26 @@ class HomeEntryPage extends StatelessWidget {
     'GridView指定横向个数': (context) => const GridViewCountPage(),
     '动画列表': (context) => const AnimatedListPage(),
     '滚动控制': (context) => const ScrollControllPage(),
-    'ListView头部':(context) => const ListViewHeaderPage(),
+    'ListView头部': (context) => const ListViewHeaderPage(),
     'ListView动态加载数据': (context) => const ListViewLoadPage(),
     '指定原型创建ListView': (context) => const ListViewPrototypePage(),
     'sperated方式来创建ListView': (context) => const ListViewSperatedPage(),
     'builder方式来创建ListView': (context) => const LiveViewBuilderPage(),
     '单滚动组件': (context) => const SingleChildScrollViewPage(),
-    '内置过渡动画组件':(context) => const AnimatedWidgetsPage(),
-    '自定义过渡动画组件':(context) => const AnimatedDecoratedBoxPage(),
-    '编译期赋值变量':(context) => const CompilingVariablePage(),
+    '内置过渡动画组件': (context) => const AnimatedWidgetsPage(),
+    '自定义过渡动画组件': (context) => const AnimatedDecoratedBoxPage(),
+    '编译期赋值变量': (context) => const CompilingVariablePage(),
     'overflow': (contextt) => const OverFlowPage(),
-    '动画切换组件2':(context) => const AnimatedSwitcherPage2(),
+    '动画切换组件2': (context) => const AnimatedSwitcherPage2(),
     '订单状态管理': (context) => OrderPage(),
     '动画切换组件': (context) => const AnimatedSwitcherPage(),
     'Hero动画': (context) => const HeroPage(),
     '自定义路由切换动画': (context) => const FadeRoutePage(),
     'PageRouteBuilder使用': (context) => const PageRouteBuilderPage(),
-    '交织动画':  (context) => const StaggerAnimationPage(),
+    '交织动画': (context) => const StaggerAnimationPage(),
     'AmimatedWidget使用': (context) => const AnimatedWidgetPage(),
     '弹簧放大动画': (context) => const BounceInAnimationPage(),
-    '放大动画' : (context) => const ScaleAnimationPage(),
+    '放大动画': (context) => const ScaleAnimationPage(),
     'Transform使用': (context) => const TransformPage(),
     'DecoratedBox使用': (context) => const DecoratedBoxPage(),
     'LayoutBuilder使用': (context) => const LayoutBuilderPage(),

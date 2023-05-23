@@ -33,8 +33,8 @@ class StaggerAnimation extends StatelessWidget {
   late final Animation<EdgeInsets> padding;
   late final Animation<Color?> color;
 
-  Widget _buildAnimation(BuildContext context,child){
-    return  Container(
+  Widget _buildAnimation(BuildContext context, child) {
+    return Container(
       alignment: Alignment.bottomCenter,
       padding: padding.value,
       child: Container(
@@ -43,7 +43,7 @@ class StaggerAnimation extends StatelessWidget {
         height: height.value,
       ),
     );
-  }  
+  }
 
   @override
   Widget build(BuildContext context) {

@@ -15,10 +15,8 @@ class _ListViewLoadPageState extends State<ListViewLoadPage> {
   void _retrieveData() {
     Future.delayed(const Duration(seconds: 2)).then((value) {
       setState(() {
-        _words.insertAll(
-          _words.length - 1,
-          generateWordPairs().take(20).map((e) => e.asPascalCase).toList()
-        );
+        _words.insertAll(_words.length - 1,
+            generateWordPairs().take(20).map((e) => e.asPascalCase).toList());
       });
     });
   }

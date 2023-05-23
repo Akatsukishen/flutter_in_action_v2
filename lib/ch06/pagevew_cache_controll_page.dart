@@ -25,7 +25,8 @@ class _PageViewCacheControllPageState extends State<PageViewCacheControllPage> {
       ),
       body: PageView.builder(
         controller: _pageController,
-        onPageChanged: (page) { //onPageChanged回调触发
+        onPageChanged: (page) {
+          //onPageChanged回调触发
           setState(() {
             _page = page;
           });

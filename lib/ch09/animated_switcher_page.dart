@@ -23,12 +23,12 @@ class _AnimatedSwitcherPageState extends State<AnimatedSwitcherPage> {
             AnimatedSwitcher(
               duration: const Duration(milliseconds: 500),
               transitionBuilder: (child, animation) {
-                return ScaleTransition(scale: animation, child : child);
+                return ScaleTransition(scale: animation, child: child);
               },
               child: Text(
                 '$_count',
                 // 显示指定Key，不同的key会被认为不同的Text,才会执行动画。
-                key: ValueKey(_count), 
+                key: ValueKey(_count),
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
             ),

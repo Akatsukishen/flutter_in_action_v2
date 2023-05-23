@@ -3,7 +3,7 @@ import 'package:flutter_in_action_v2/ch04/layout_log_print.dart';
 
 /// 按照最大长度来确定横向个数
 /// 例如横向宽度 392.7
-/// 指定最大宽度为 120 
+/// 指定最大宽度为 120
 /// 那么最终横向个数为 392.7 / 120 向上取整 4
 /// 最终每个的宽度为 392.7 /4 = 98.2
 class GridViewExtentPage extends StatefulWidget {
@@ -70,7 +70,6 @@ class _GridViewExtentPageState extends State<GridViewExtentPage> {
               width: 140,
               color: Colors.blue,
             ),
-      
           ],
         ),
       ),
