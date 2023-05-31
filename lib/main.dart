@@ -9,6 +9,7 @@ import 'package:flutter_in_action_v2/ch06/list_vew_header_page.dart';
 import 'package:flutter_in_action_v2/ch06/list_view_builder_page.dart';
 import 'package:flutter_in_action_v2/ch06/list_view_prototype_page.dart';
 import 'package:flutter_in_action_v2/ch06/listview_load_page.dart';
+import 'package:flutter_in_action_v2/ch06/nested_tab_bar_view.dart';
 import 'package:flutter_in_action_v2/ch06/pagevew_cache_controll_page.dart';
 import 'package:flutter_in_action_v2/ch06/pageview_simple_page.dart';
 import 'package:flutter_in_action_v2/ch06/scroll_controll_page.dart';
@@ -17,6 +18,7 @@ import 'package:flutter_in_action_v2/ch06/snap_app_bar_page.dart';
 import 'package:flutter_in_action_v2/ch06/tab_bar_view_default_controller_page.dart';
 import 'package:flutter_in_action_v2/ch06/tab_bar_view_page.dart';
 import 'package:flutter_in_action_v2/ch09/animated_switcher_page.dart';
+import 'package:flutter_in_action_v2/exercise/asset_image_page.dart';
 import 'package:flutter_in_action_v2/exercise/order_page.dart';
 import 'package:flutter_in_action_v2/exercise/overflow_page.dart';
 import 'package:flutter_in_action_v2/exercise/variable_compile.dart';
@@ -63,6 +65,8 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    'ios测试':(context) => const AssetImagePage(),
+    'NestedScrollView内嵌TabBarView' : (context) => const NestedTabBarViewPage(),
     '内嵌滚动View头部下拉不遮住已有内容': (context) => const SnapAppBarPage2(),
     '内嵌滚动View头部示例': (context) => const SnapAppBarPage(),
     'SliverPersistentHeader使用':(context) => const SliverPersistentHeaderPage(),
