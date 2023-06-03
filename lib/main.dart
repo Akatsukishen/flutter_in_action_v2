@@ -17,6 +17,7 @@ import 'package:flutter_in_action_v2/ch06/single_scroll_view_page.dart';
 import 'package:flutter_in_action_v2/ch06/snap_app_bar_page.dart';
 import 'package:flutter_in_action_v2/ch06/tab_bar_view_default_controller_page.dart';
 import 'package:flutter_in_action_v2/ch06/tab_bar_view_page.dart';
+import 'package:flutter_in_action_v2/ch07/inherited_widget_page.dart';
 import 'package:flutter_in_action_v2/ch09/animated_switcher_page.dart';
 import 'package:flutter_in_action_v2/exercise/asset_image_page.dart';
 import 'package:flutter_in_action_v2/exercise/order_page.dart';
@@ -65,6 +66,7 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    'InheritedWidget': (context) => const InheritedWidgetPage(),
     'ios测试':(context) => const AssetImagePage(),
     'NestedScrollView内嵌TabBarView' : (context) => const NestedTabBarViewPage(),
     '内嵌滚动View头部下拉不遮住已有内容': (context) => const SnapAppBarPage2(),
