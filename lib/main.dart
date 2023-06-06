@@ -20,6 +20,7 @@ import 'package:flutter_in_action_v2/ch06/tab_bar_view_page.dart';
 import 'package:flutter_in_action_v2/ch07/color_page.dart';
 import 'package:flutter_in_action_v2/ch07/inherited_widget_page.dart';
 import 'package:flutter_in_action_v2/ch07/theme_page.dart';
+import 'package:flutter_in_action_v2/ch07/value_listenable_builder_page.dart';
 import 'package:flutter_in_action_v2/ch09/animated_switcher_page.dart';
 import 'package:flutter_in_action_v2/exercise/asset_image_page.dart';
 import 'package:flutter_in_action_v2/exercise/order_page.dart';
@@ -68,6 +69,7 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    'valueListenableBuilder页面': (context) => const ValueListenableBuilderPage(),
     '主题': (context) => const ThemePage(),
     '颜色显示': (context) => const ColorPage(),
     'InheritedWidget': (context) => const InheritedWidgetPage(),
