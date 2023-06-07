@@ -35,6 +35,7 @@ import 'ch05/transform_page.dart';
 import 'ch06/list_view_sperated_page.dart';
 import 'ch06/sliver_persistent_header_delegate_page.dart';
 import 'ch06/snap_app_bar_page2.dart';
+import 'ch07/stream_builder_page.dart';
 import 'ch09/animated_decorated_box_page.dart';
 import 'ch09/animated_switcher_page2.dart';
 import 'ch09/animated_widget_page.dart';
@@ -69,6 +70,7 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    'streamBuilder页面': (context) => const StreamBuilderPage(),
     'valueListenableBuilder页面': (context) => const ValueListenableBuilderPage(),
     '主题': (context) => const ThemePage(),
     '颜色显示': (context) => const ColorPage(),
