@@ -25,6 +25,7 @@ import 'package:flutter_in_action_v2/ch07/value_listenable_builder_page.dart';
 import 'package:flutter_in_action_v2/ch08/drag_page.dart';
 import 'package:flutter_in_action_v2/ch08/gesture_detecter_page.dart';
 import 'package:flutter_in_action_v2/ch08/gesture_scale_page.dart';
+import 'package:flutter_in_action_v2/ch08/pointer_down_listener.dart';
 import 'package:flutter_in_action_v2/ch08/pointer_event_page.dart';
 import 'package:flutter_in_action_v2/ch09/animated_switcher_page.dart';
 import 'package:flutter_in_action_v2/exercise/asset_image_page.dart';
@@ -43,6 +44,7 @@ import 'ch06/snap_app_bar_page2.dart';
 import 'ch07/date_picker_page.dart';
 import 'ch07/stream_builder_page.dart';
 import 'ch08/gesture_recognizer_page.dart';
+import 'ch08/stack_event_page.dart';
 import 'ch09/animated_decorated_box_page.dart';
 import 'ch09/animated_switcher_page2.dart';
 import 'ch09/animated_widget_page.dart';
@@ -77,6 +79,8 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    '事件分发02': (context) => const StackEventPage(),
+    '事件分发01': (context) => const PointerDownPage(),
     '手势识别': (context) => const GestureRecognizerPage(),
     '缩放事件': (context) => const GestureScalePage(),
     '拖拽事件': (context) => const DragPage(),
