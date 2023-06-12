@@ -42,6 +42,7 @@ import 'ch06/sliver_persistent_header_delegate_page.dart';
 import 'ch06/snap_app_bar_page2.dart';
 import 'ch07/date_picker_page.dart';
 import 'ch07/stream_builder_page.dart';
+import 'ch08/gesture_recognizer_page.dart';
 import 'ch09/animated_decorated_box_page.dart';
 import 'ch09/animated_switcher_page2.dart';
 import 'ch09/animated_widget_page.dart';
@@ -76,6 +77,7 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    '手势识别': (context) => const GestureRecognizerPage(),
     '缩放事件': (context) => const GestureScalePage(),
     '拖拽事件': (context) => const DragPage(),
     '手势检测': (context) => const GestureDetectorPage(),
