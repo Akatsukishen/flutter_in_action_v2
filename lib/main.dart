@@ -44,6 +44,8 @@ import 'ch06/sliver_persistent_header_delegate_page.dart';
 import 'ch06/snap_app_bar_page2.dart';
 import 'ch07/date_picker_page.dart';
 import 'ch07/stream_builder_page.dart';
+import 'ch08/gesture_competion_page.dart';
+import 'ch08/gesture_competion_page02.dart';
 import 'ch08/gesture_recognizer_page.dart';
 import 'ch08/stack_event_page.dart';
 import 'ch09/animated_decorated_box_page.dart';
@@ -80,6 +82,8 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    '手势竞争02': (context) => const GestureCompetionPage02(),
+    '手势竞争': (context) => const GestureCompetionPage(),
     'HitTestBehavior': (context) => const HitTestBehaviorPage(),
     '事件分发02': (context) => const StackEventPage(),
     '事件分发01': (context) => const PointerDownPage(),
