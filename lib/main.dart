@@ -25,6 +25,7 @@ import 'package:flutter_in_action_v2/ch07/value_listenable_builder_page.dart';
 import 'package:flutter_in_action_v2/ch08/drag_page.dart';
 import 'package:flutter_in_action_v2/ch08/gesture_detecter_page.dart';
 import 'package:flutter_in_action_v2/ch08/gesture_scale_page.dart';
+import 'package:flutter_in_action_v2/ch08/hit_test_behavior_page.dart';
 import 'package:flutter_in_action_v2/ch08/pointer_down_listener.dart';
 import 'package:flutter_in_action_v2/ch08/pointer_event_page.dart';
 import 'package:flutter_in_action_v2/ch09/animated_switcher_page.dart';
@@ -79,6 +80,7 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    'HitTestBehavior': (context) => const HitTestBehaviorPage(),
     '事件分发02': (context) => const StackEventPage(),
     '事件分发01': (context) => const PointerDownPage(),
     '手势识别': (context) => const GestureRecognizerPage(),
