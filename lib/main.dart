@@ -23,6 +23,7 @@ import 'package:flutter_in_action_v2/ch07/inherited_widget_page.dart';
 import 'package:flutter_in_action_v2/ch07/theme_page.dart';
 import 'package:flutter_in_action_v2/ch07/value_listenable_builder_page.dart';
 import 'package:flutter_in_action_v2/ch08/drag_page.dart';
+import 'package:flutter_in_action_v2/ch08/gesture_conflict_page.dart';
 import 'package:flutter_in_action_v2/ch08/gesture_detecter_page.dart';
 import 'package:flutter_in_action_v2/ch08/gesture_scale_page.dart';
 import 'package:flutter_in_action_v2/ch08/hit_test_behavior_page.dart';
@@ -82,6 +83,7 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    '多手势冲突': (context) => const GestureConflictPage(),
     '手势竞争02': (context) => const GestureCompetionPage02(),
     '手势竞争': (context) => const GestureCompetionPage(),
     'HitTestBehavior': (context) => const HitTestBehaviorPage(),
