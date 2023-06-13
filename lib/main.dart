@@ -28,6 +28,7 @@ import 'package:flutter_in_action_v2/ch08/gesture_conflict_page.dart';
 import 'package:flutter_in_action_v2/ch08/gesture_detecter_page.dart';
 import 'package:flutter_in_action_v2/ch08/gesture_scale_page.dart';
 import 'package:flutter_in_action_v2/ch08/hit_test_behavior_page.dart';
+import 'package:flutter_in_action_v2/ch08/list_notification_page.dart';
 import 'package:flutter_in_action_v2/ch08/pointer_down_listener.dart';
 import 'package:flutter_in_action_v2/ch08/pointer_event_page.dart';
 import 'package:flutter_in_action_v2/ch09/animated_switcher_page.dart';
@@ -84,6 +85,7 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    '滚动监听': (context) => const ListNotificationPage(),
     '手势冲突解决': (context) => const CustomGestureRecognizerPage(),
     '多手势冲突': (context) => const GestureConflictPage(),
     '手势竞争02': (context) => const GestureCompetionPage02(),
