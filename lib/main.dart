@@ -47,6 +47,7 @@ import 'ch06/sliver_persistent_header_delegate_page.dart';
 import 'ch06/snap_app_bar_page2.dart';
 import 'ch07/date_picker_page.dart';
 import 'ch07/stream_builder_page.dart';
+import 'ch08/custom_notification_page.dart';
 import 'ch08/gesture_competion_page.dart';
 import 'ch08/gesture_competion_page02.dart';
 import 'ch08/gesture_recognizer_page.dart';
@@ -85,6 +86,7 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    '自定义通知': (context) => const CustomNotificationPage(),
     '滚动监听': (context) => const ListNotificationPage(),
     '手势冲突解决': (context) => const CustomGestureRecognizerPage(),
     '多手势冲突': (context) => const GestureConflictPage(),
