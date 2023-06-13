@@ -32,6 +32,7 @@ import 'package:flutter_in_action_v2/ch08/list_notification_page.dart';
 import 'package:flutter_in_action_v2/ch08/pointer_down_listener.dart';
 import 'package:flutter_in_action_v2/ch08/pointer_event_page.dart';
 import 'package:flutter_in_action_v2/ch09/animated_switcher_page.dart';
+import 'package:flutter_in_action_v2/ch10/gradient_circular_indicator_page.dart';
 import 'package:flutter_in_action_v2/exercise/asset_image_page.dart';
 import 'package:flutter_in_action_v2/exercise/order_page.dart';
 import 'package:flutter_in_action_v2/exercise/overflow_page.dart';
@@ -87,6 +88,7 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    '自定义渐变进度条':(context) => const GradientCircularIndicatorPage(),
     '自定义绘制': (context) => const CustomPaintPage(),
     '自定义通知': (context) => const CustomNotificationPage(),
     '滚动监听': (context) => const ListNotificationPage(),
