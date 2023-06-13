@@ -62,6 +62,7 @@ import 'ch09/hero_page.dart';
 import 'ch09/pageroute_builder_page.dart';
 import 'ch09/scale_animation_page.dart';
 import 'ch09/stagger_animation_page.dart';
+import 'ch10/custom_paint_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -86,6 +87,7 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    '自定义绘制': (context) => const CustomPaintPage(),
     '自定义通知': (context) => const CustomNotificationPage(),
     '滚动监听': (context) => const ListNotificationPage(),
     '手势冲突解决': (context) => const CustomGestureRecognizerPage(),
