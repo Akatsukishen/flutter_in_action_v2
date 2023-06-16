@@ -32,6 +32,7 @@ import 'package:flutter_in_action_v2/ch08/list_notification_page.dart';
 import 'package:flutter_in_action_v2/ch08/pointer_down_listener.dart';
 import 'package:flutter_in_action_v2/ch08/pointer_event_page.dart';
 import 'package:flutter_in_action_v2/ch09/animated_switcher_page.dart';
+import 'package:flutter_in_action_v2/ch10/done_widget_page.dart';
 import 'package:flutter_in_action_v2/ch10/gradient_circular_indicator_page.dart';
 import 'package:flutter_in_action_v2/exercise/asset_image_page.dart';
 import 'package:flutter_in_action_v2/exercise/order_page.dart';
@@ -90,6 +91,7 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    '自定义done组件': (context) => const DoneWidgetPage(),
     '大小可定义的自定义checkbox': (context) => const CustomCheckBoxPage(),
     '可任意旋转控件':(context) => const TurnBoxPage(),
     '自定义渐变进度条':(context) => const GradientCircularIndicatorPage(),

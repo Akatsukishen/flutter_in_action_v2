@@ -110,7 +110,7 @@ class CustomCheckBox extends LeafRenderObjectWidget {
   }
 }
 
-class RenderCustomCheckBox extends RenderBox with RenderObjectMixin {
+class RenderCustomCheckBox extends RenderBox with RenderObjectAnimationMixin {
   RenderCustomCheckBox({
     required this.value,
     required this.strokeWidth,
@@ -223,7 +223,7 @@ class RenderCustomCheckBox extends RenderBox with RenderObjectMixin {
   }
 }
 
-mixin RenderObjectMixin on RenderObject {
+mixin RenderObjectAnimationMixin on RenderObject {
   double _progress = 0;
   int? _lastTimeStamp;
 
