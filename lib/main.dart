@@ -63,6 +63,7 @@ import 'ch09/hero_page.dart';
 import 'ch09/pageroute_builder_page.dart';
 import 'ch09/scale_animation_page.dart';
 import 'ch09/stagger_animation_page.dart';
+import 'ch10/custom_check_box_page.dart';
 import 'ch10/custom_paint_page.dart';
 import 'ch10/turn_box_page.dart';
 
@@ -89,6 +90,7 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    '大小可定义的自定义checkbox': (context) => const CustomCheckBoxPage(),
     '可任意旋转控件':(context) => const TurnBoxPage(),
     '自定义渐变进度条':(context) => const GradientCircularIndicatorPage(),
     '自定义绘制': (context) => const CustomPaintPage(),
