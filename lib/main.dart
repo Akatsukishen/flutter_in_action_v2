@@ -35,6 +35,7 @@ import 'package:flutter_in_action_v2/ch09/animated_switcher_page.dart';
 import 'package:flutter_in_action_v2/ch10/done_widget_page.dart';
 import 'package:flutter_in_action_v2/ch10/gradient_circular_indicator_page.dart';
 import 'package:flutter_in_action_v2/ch11/file_operation_page.dart';
+import 'package:flutter_in_action_v2/ch11/http_client_page.dart';
 import 'package:flutter_in_action_v2/exercise/asset_image_page.dart';
 import 'package:flutter_in_action_v2/exercise/order_page.dart';
 import 'package:flutter_in_action_v2/exercise/overflow_page.dart';
@@ -93,6 +94,7 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    'httpClient简单使用': (context) => const HttpClientPage(),
     '文件简单操作': (context) => const FileOperationPage(),
     '自定义水印2': (context) => const StaggerWaterMaskPage(),
     '自定义水印': (context) => const WaterMaskPage(),
