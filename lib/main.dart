@@ -67,6 +67,7 @@ import 'ch09/stagger_animation_page.dart';
 import 'ch10/custom_check_box_page.dart';
 import 'ch10/custom_paint_page.dart';
 import 'ch10/turn_box_page.dart';
+import 'ch10/water_mask_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -91,6 +92,8 @@ class HomeEntryPage extends StatelessWidget {
   HomeEntryPage({super.key});
 
   final _entries = <String, WidgetBuilder>{
+    '自定义水印2': (context) => const StaggerWaterMaskPage(),
+    '自定义水印': (context) => const WaterMaskPage(),
     '自定义done组件': (context) => const DoneWidgetPage(),
     '大小可定义的自定义checkbox': (context) => const CustomCheckBoxPage(),
     '可任意旋转控件':(context) => const TurnBoxPage(),
